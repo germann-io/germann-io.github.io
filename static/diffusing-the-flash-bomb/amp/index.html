@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html ⚡>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <title>Diffusing the Flash Bomb - Adobe Flash in 2021</title>
+
+    <meta name="description" content="While updates of customer facing applications are likely to be rolled-out by 2021 many internal ones will not be ready in time. There are a few solutions." />
+    <link rel="icon" href="../../favicon.png" type="image/png" />
+    <link rel="canonical" href="../index.html" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    
+    <meta property="og:site_name" content="germann.io" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Diffusing the Flash Bomb - Adobe Flash in 2021" />
+    <meta property="og:description" content="While this may have not have been an unforeseeable step to force companies to adopt more modern frameworks many struggle to update their products in time for the 2021 deadline." />
+    <meta property="og:url" content="https://www.germann.io/diffusing-the-flash-bomb/" />
+    <meta property="og:image" content="https://www.germann.io/content/images/2020/12/tiles_what_s_newindesign-removalofflash.png" />
+    <meta property="article:published_time" content="2020-09-23T20:39:00.000Z" />
+    <meta property="article:modified_time" content="2020-12-20T11:40:55.000Z" />
+    <meta property="article:tag" content="Technical" />
+    <meta property="article:tag" content="Post" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Diffusing the Flash Bomb - Adobe Flash in 2021" />
+    <meta name="twitter:description" content="While this may have not have been an unforeseeable step to force companies to adopt more modern frameworks many struggle to update their products in time for the 2021 deadline." />
+    <meta name="twitter:url" content="https://www.germann.io/diffusing-the-flash-bomb/" />
+    <meta name="twitter:image" content="https://www.germann.io/content/images/2020/12/tiles_what_s_newindesign-removalofflash.png" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Fabio Germann" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Technical, Post" />
+    <meta name="twitter:creator" content="@germafab" />
+    <meta property="og:image:width" content="834" />
+    <meta property="og:image:height" content="526" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "germann.io",
+        "url": "https://www.germann.io/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.germann.io/favicon.png"
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Fabio Germann",
+        "image": {
+            "@type": "ImageObject",
+            "url": "//www.gravatar.com/avatar/ff93b9859894a34e33179206c8dfd2c0?s=250&d=mm&r=x",
+            "width": 250,
+            "height": 250
+        },
+        "url": "https://www.germann.io/author/fabio/",
+        "sameAs": [
+            "https://germann.io",
+            "https://twitter.com/germafab"
+        ]
+    },
+    "headline": "Diffusing the Flash Bomb - Adobe Flash in 2021",
+    "url": "https://www.germann.io/diffusing-the-flash-bomb/",
+    "datePublished": "2020-09-23T20:39:00.000Z",
+    "dateModified": "2020-12-20T11:40:55.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://www.germann.io/content/images/2020/12/tiles_what_s_newindesign-removalofflash.png",
+        "width": 834,
+        "height": 526
+    },
+    "keywords": "Technical, Post",
+    "description": "While this may have not have been an unforeseeable step to force companies to adopt more modern frameworks many struggle to update their products in time for the 2021 deadline.",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.germann.io/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 3.40" />
+    <link rel="alternate" type="application/rss+xml" title="germann.io" href="../../rss/index.html" />
+
+    <style amp-custom>
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    html {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        font-size: 62.5%;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    body {
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        color: #3a4145;
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+        font-size: 1.7rem;
+        line-height: 1.55em;
+        font-weight: 400;
+        font-style: normal;
+        background: #fff;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    p,
+    ul,
+    ol,
+    li,
+    dl,
+    dd,
+    hr,
+    pre,
+    form,
+    table,
+    video,
+    figure,
+    figcaption,
+    blockquote {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul[class],
+    ol[class] {
+        padding: 0;
+        list-style: none;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+    }
+
+    input,
+    button,
+    select,
+    textarea {
+        font: inherit;
+        -webkit-appearance: none;
+    }
+
+    fieldset {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    label {
+        display: block;
+        font-size: 0.9em;
+        font-weight: 700;
+    }
+
+    hr {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid currentcolor;
+        opacity: 0.1;
+    }
+
+    ::selection {
+        text-shadow: none;
+        background: #cbeafb;
+    }
+
+    mark {
+        background-color: #fdffb6;
+    }
+
+    small {
+        font-size: 80%;
+    }
+
+    sub,
+    sup {
+        position: relative;
+        font-size: 75%;
+        line-height: 0;
+        vertical-align: baseline;
+    }
+    sup {
+        top: -0.5em;
+    }
+    sub {
+        bottom: -0.25em;
+    }
+
+    ul li + li {
+        margin-top: 0.6em;
+    }
+
+    a {
+        color: #1292EE;
+        text-decoration-skip-ink: auto;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+        font-weight: 700;
+        color: #121212;
+        line-height: 1.4em;
+    }
+
+    h1 {
+        font-size: 3.4rem;
+        line-height: 1.1em;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+        line-height: 1.2em;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    h4 {
+        font-size: 1.7rem;
+    }
+
+    h5 {
+        font-size: 1.6rem;
+    }
+
+    h6 {
+        font-size: 1.6rem;
+    }
+
+    amp-img {
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    amp-img img {
+        object-fit: cover;
+    }
+
+    .page-header {
+        padding: 50px 5vmin 30px;
+        text-align: center;
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .page-header a {
+        color: #121212;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 1.6rem;
+        letter-spacing: -0.1px;
+    }
+
+    .post {
+        max-width: 680px;
+        margin: 0 auto;
+    }
+
+    .post-header {
+        margin: 0 5vmin 5vmin;
+        text-align: center;
+    }
+
+    .post-meta {
+        margin: 1rem 0 0 0;
+        text-transform: uppercase;
+        color: #738a94;
+        font-weight: 500;
+        font-size: 1.3rem;
+    }
+
+    .post-image {
+        margin: 0 0 5vmin;
+    }
+
+    .post-image img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .post-content {
+        padding: 0 5vmin;
+    }
+
+    .post-content > * + * {
+        margin-top: 1.5em;
+    }
+
+    .post-content [id]:not(:first-child) {
+        margin: 2em 0 0;
+    }
+
+    .post-content > [id] + * {
+        margin-top: 1rem;
+    }
+
+    .post-content [id] + .kg-card,
+    .post-content blockquote + .kg-card {
+        margin-top: 40px;
+    }
+
+    .post-content > ul,
+    .post-content > ol,
+    .post-content > dl {
+        padding-left: 1.9em;
+    }
+
+    .post-content hr {
+        margin-top: 40px;
+    }
+
+    .post .post-content hr + * {
+        margin-top: 40px;
+    }
+
+    .post-content amp-img {
+        background-color: #f8f8f8;
+    }
+
+    .post-content blockquote {
+        position: relative;
+        font-style: italic;
+    }
+
+    .post-content blockquote::before {
+        content: "";
+        position: absolute;
+        left: -1.5em;
+        top: 0;
+        bottom: 0;
+        width: 0.3rem;
+        background: #000;
+    }
+
+    .post-content :not(.kg-card):not([id]) + .kg-card {
+        margin-top: 40px;
+    }
+
+    .post-content .kg-card + :not(.kg-card) {
+        margin-top: 40px;
+    }
+
+    .kg-card figcaption {
+        padding: 1.5rem 1.5rem 0;
+        text-align: center;
+        font-weight: 500;
+        font-size: 1.3rem;
+        line-height: 1.4em;
+        opacity: 0.6;
+    }
+
+    .kg-card figcaption strong {
+        color: rgba(0,0,0,0.8);
+    }
+
+    .post-content :not(pre) code {
+        vertical-align: middle;
+        padding: 0.15em 0.4em 0.15em;
+        border: #e1eaef 1px solid;
+        font-weight: 400;
+        font-size: 0.9em;
+        line-height: 1em;
+        color: #dc0050;
+        background: #f0f6f9;
+        border-radius: 0.25em;
+    }
+
+    .post-content > pre {
+        overflow: scroll;
+        padding: 16px 20px;
+        color: #fff;
+        background: #1F2428;
+        border-radius: 5px;
+        box-shadow: 0 2px 6px -2px rgba(0,0,0,.1), 0 0 1px rgba(0,0,0,.4);
+    }
+
+    .kg-embed-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .kg-image-card img {
+        margin: auto;
+    }
+
+    .kg-gallery-card + .kg-gallery-card {
+        margin-top: 0.75em;
+    }
+
+    .kg-gallery-container {
+        position: relative;
+    }
+
+    .kg-gallery-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .kg-gallery-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .kg-gallery-row:not(:first-of-type) {
+        margin: 0.75em 0 0 0;
+    }
+
+    .kg-gallery-image:not(:first-of-type) {
+        margin: 0 0 0 0.75em;
+    }
+
+    .kg-bookmark-card,
+    .kg-bookmark-publisher {
+        position: relative;
+    }
+
+    .kg-bookmark-container,
+    .kg-bookmark-container:hover {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        color: currentColor;
+        background: rgba(255,255,255,0.6);
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+        text-decoration: none;
+        border-radius: 5px;
+        box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.4);
+        overflow: hidden;
+    }
+
+    .kg-bookmark-content {
+        flex-basis: 0;
+        flex-grow: 999;
+        padding: 20px;
+        order: 1;
+    }
+
+    .kg-bookmark-title {
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 1.3em;
+    }
+
+    .kg-bookmark-description {
+        display: -webkit-box;
+        max-height: 45px;
+        margin: 0.5em 0 0 0;
+        font-size: 1.4rem;
+        line-height: 1.55em;
+        overflow: hidden;
+        opacity: 0.8;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    .kg-bookmark-metadata {
+        margin-top: 20px;
+    }
+
+    .kg-bookmark-metadata {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 1.3rem;
+        line-height: 1.3em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .kg-bookmark-description {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+    }
+
+    .kg-bookmark-metadata amp-img {
+        width: 18px;
+        height: 18px;
+        max-width: 18px;
+        max-height: 18px;
+        margin-right: 10px;
+    }
+
+    .kg-bookmark-thumbnail {
+        display: flex;
+        flex-basis: 20rem;
+        flex-grow: 1;
+        justify-content: flex-end;
+    }
+
+    .kg-bookmark-thumbnail amp-img {
+        max-height: 200px;
+    }
+
+    .kg-bookmark-author {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .kg-bookmark-publisher::before {
+        content: "•";
+        margin: 0 .5em;
+    }
+
+    .kg-width-full.kg-card-hascaption {
+        display: grid;
+        grid-template-columns: inherit;
+    }
+
+    .post-content table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .post-content th {
+        padding: 0.5em 0.8em;
+        text-align: left;
+        font-size: .75em;
+        text-transform: uppercase;
+    }
+
+    .post-content td {
+        padding: 0.4em 0.7em;
+    }
+
+    .post-content tbody tr:nth-child(2n + 1) {
+        background-color: rgba(0,0,0,0.1);
+        padding: 1px;
+    }
+
+    .post-content tbody tr:nth-child(2n + 2) td:last-child {
+        box-shadow:
+            inset 1px 0 rgba(0,0,0,0.1),
+            inset -1px 0 rgba(0,0,0,0.1);
+    }
+
+    .post-content tbody tr:nth-child(2n + 2) td {
+        box-shadow: inset 1px 0 rgba(0,0,0,0.1);
+    }
+
+    .post-content tbody tr:last-child {
+        border-bottom: 1px solid rgba(0,0,0,.1);
+    }
+
+    .page-footer {
+        padding: 60px 5vmin;
+        margin: 60px auto 0;
+        text-align: center;
+        background-color: #f8f8f8;
+    }
+
+    .page-footer h3 {
+        margin: 0.5rem 0 0 0;
+    }
+
+    .page-footer p {
+        max-width: 500px;
+        margin: 1rem auto 1.5rem;
+        font-size: 1.7rem;
+        line-height: 1.5em;
+        color: rgba(0,0,0,0.6)
+    }
+
+    .powered {
+        display: inline-flex;
+        align-items: center;
+        margin: 30px 0 0;
+        padding: 6px 9px 6px 6px;
+        border: rgba(0,0,0,0.1) 1px solid;
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: -0.2px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        font-weight: 500;
+        color: #222;
+        text-decoration: none;
+        background: #fff;
+        border-radius: 6px;
+    }
+
+    .powered svg {
+        height: 16px;
+        width: 16px;
+        margin: 0 6px 0 0;
+    }
+
+    @media (max-width: 600px) {
+        body {
+            font-size: 1.6rem;
+        }
+        h1 {
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+        }
+    }
+
+    @media (max-width: 400px) {
+        h1 {
+            font-size: 2.6rem;
+            line-height: 1.15em;
+        }
+        h2 {
+            font-size: 2rem;
+            line-height: 1.2em;
+        }
+        h3 {
+            font-size: 1.7rem;
+        }
+    }
+    </style>
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    
+
+</head>
+
+<body class="amp-template">
+    <header class="page-header">
+        <a href="../../index.html">
+                <amp-img class="site-icon" src="https://www.germann.io/content/images/2020/12/security-shield.png" width="50" height="50" layout="fixed"></amp-img>
+        </a>
+    </header>
+
+    <main class="content" role="main">
+        <article class="post">
+
+            <header class="post-header">
+                <h1 class="post-title">Diffusing the Flash &quot;Bomb&quot;</h1>
+                <section class="post-meta">
+                    Fabio Germann -
+                    <time class="post-date" datetime="2020-09-23">23 Sep 2020</time>
+                </section>
+            </header>
+            <figure class="post-image">
+                <amp-img src="https://www.germann.io/content/images/2020/12/tiles_what_s_newindesign-removalofflash.png" width="600" height="340" layout="responsive"></amp-img>
+            </figure>
+            <section class="post-content">
+
+                <p>A (long) while ago Adobe announced - to the joy of many in our industry - that they will discontinue the support of the Flash Player by 2021. Around the same time all the major browsers announced plans to discontinue integration of the Flash Player. Some already did so well ahead of time (Apple with Safari 14 for example).</p><h3 id="reality-check">Reality check</h3><p>While this may have not have been an unforeseeable step to force companies to adopt more modern frameworks (like Angular) many struggle to update their products in time for the 2021 deadline. While updates of customer facing applications are likely to be completed by beginning of 2021 many internal applications will not be ready in time. Enterprise IT usually contains many applications that will be seen by non-employees. Those system often won't get updated for many months if not years (some may be EOL with no updates at all).</p><p>This was also true for applications that I use on an (almost) daily basis. After a bit of research on this topic there were only a hand full of solutions: ‌‌</p><ul><li>Rewrite the application‌‌</li><li>Hire someone / outsource the rewrite of the application‌‌</li><li>Purchase a custom browser (with a proprietary build of the Flash Player)‌‌</li><li>Use a VM with "hacky" and seriously insecure configuration</li></ul><p>All of those options are not ideal: rewrite would take too long, paying for a rewrite blows the budget, a customer browser would also put a strain on the budget and using a virtual machine has many more drawbacks than just the risks related to security of the work environment.</p><p>There needed to be another solution! And there was!‌</p><p><strong>DISCLAIMER</strong>: <em>USE AT YOUR OWN RISK PLEASE BE AWARE THAT ANY INFORMATION PRESENTED HERE MAY BE CONSIDERED INACCURATE, DANGEROUS OR ILLEGAL DEPENDING ON YOUR LOCATION. ALSO NOTE THAT ANY LICENSES FOR INVOLVED SOFTWARE AND LIBRARIES NEED TO BE CONSIDERED AND FOLLOWED.</em></p><p>A customized, old "Chromium" browser with an outdated version of the PPAPI-Flash-Plugin as well as a custom extension for at least some security.</p><h3 id="building-the-browser">Building the browser</h3><p>As a base I used an old version of the Chromium browser - VCS revision 344925 to be exact. The archived versions can be found here: <a href="https://www.chromium.org/getting-involved/download-chromium">https://www.chromium.org/getting-involved/download-chromium</a></p><p>For simplicity I "transplanted" the PPAPI-Flash-Player which was bundled with a Google Chrome browser. Again I used an older version (50.0.2661.75) which you will undoubltedly find when searching for it on google.</p><p><code>cp -R Chrome.app/Contents/Versions/&lt;VERSION&gt;/Chromium\ Framework.framework/Internet\ Plug-Ins Chromium.app/Contents/Versions/&lt;VERSION&gt;/Chromium\ Framework.framework/</code></p><p>You might ask - with reason - why not just use Google Chrome? Well, Chrome's built-in auto update as well as "phone-home-features" would likely interfere with my plan later on.</p><p>For some reason Chromium could not find the PPAPI-Flash-Player plugin automatically but a CLI option did the trick. This meant that I had to change how the app was started (adding the CLI option to the defaults). On macOS this is done as follows (other OS allow similar configuration).</p><p>In the file <code>Chromium.app/Contents/Info.plist</code> the value for key <code>CFBundleExecutable</code> needed to be changed. For simplicity I created a new launcher script in <code>Chromium.app/Contents/MacOS/launcher</code> (don't forget to mark is as executable) with the content:</p><pre><code>#!/bin/sh
+RealBin="Chromium"
+AppDir="$(dirname "$0")"
+exec "$AppDir/$RealBin" \
+  --ppapi-flash-path=\
+  "$AppDir/../Versions/&lt;VERSION&gt;/Chromium Framework.framework/Internet Plug-Ins/PepperFlash/PepperFlashPlayer.plugin"\
+  --ppapi-flash-version=19.0.0.226
+</code></pre>
+<p>To my surprise this already worked quite well. BUT: as I am aware that an outdated browser with an outdated Flash version is quite a risk I need to take appropriate steps to lock down the browser.</p><h3 id="restricting-and-securing-the-browser">Restricting and securing the browser</h3><p>As I only need to access a very specific set of flash website (internal to the organization) there easy steps to secure the browser:</p><ul><li>Use an allow-list for URLs that the browser will open</li><li>Don't register the browser as a default browser</li><li>Don't register the browser to open any file type of the OS</li><li>Restrict navigation in general</li></ul><p>For the allow-list I chose to use an existing chrome extension and adapt it to my needs and then auto-load it through a launcher option. The extension I based my solution on can be found here: <a href="https://github.com/glitchedmob/Chrome-stay-focused">https://github.com/glitchedmob/Chrome-stay-focused</a> (the pre-built extension is located in the "build" directory. In order to change it from a "block-list" to an "allow-list" approach some changes in the code are necessary.</p><pre><code>class Controller {
+    constructor(store, view) {
+        this.store = store;
+        this.view = view;
+        this.blockSites();
+    }
+    blockSites() {
+        let atLeastOneMatch = false;
+        for (let site of this.store.sites) {
+            if (window.location.href.includes(site)) {
+                atLeastOneMatch = true;
+            }
+        }
+        if(!atLeastOneMatch) {
+            this.view.addApp();
+        }
+    }
+}
+</code></pre>
+<p>Furthermore I needed to add the allowed URLs to the configuration of the extension. All that was left to do was to package the extension with the browser. A few simple command line options of chromium did the trick:</p><p><code>--load-extension="$AppDir/../Extension"</code><br />
+Also the contents of the extension (content of the "build" folder) needed to be copied there.</p>
+<p>Last but not least I removed all capabilities of the patchwork browser to register itself as an application to open any sort of document. This had to be done inside the application configuration file:</p><p><code>Chromium.app/Contents/Info.plist</code> where I removed all elements of <code>UTImportedTypeDeclarations</code>.</p>
+<h2 id="conclusion">Conclusion</h2><p>While I still consider this an imperfect solution to the problem it still checks all the boxes: cost, flexibility and (a minimally) secure. On the other hand some of the pressure to drop flash completely fades - in the positive and negative sense.</p><p>In case you liked this post consider buying me a coffee (so I can write the next one).</p>
+
+            </section>
+
+        </article>
+    </main>
+    <footer class="page-footer">
+            <amp-img class="site-icon" src="https://www.germann.io/content/images/2020/12/security-shield.png" width="50" height="50" layout="fixed"></amp-img>
+        <h3>germann.io</h3>
+            <p>ideas and opinions</p>
+        <p><a href="../../index.html">Read more posts →</a></p>
+        <a class="powered" href="https://ghost.org" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 156 156"><g fill="none" fill-rule="evenodd"><rect fill="#15212B" width="156" height="156" rx="27"/><g transform="translate(36 36)" fill="#F6F8FA"><path d="M0 71.007A4.004 4.004 0 014 67h26a4 4 0 014 4.007v8.986A4.004 4.004 0 0130 84H4a4 4 0 01-4-4.007v-8.986zM50 71.007A4.004 4.004 0 0154 67h26a4 4 0 014 4.007v8.986A4.004 4.004 0 0180 84H54a4 4 0 01-4-4.007v-8.986z"/><rect y="34" width="84" height="17" rx="4"/><path d="M0 4.007A4.007 4.007 0 014.007 0h41.986A4.003 4.003 0 0150 4.007v8.986A4.007 4.007 0 0145.993 17H4.007A4.003 4.003 0 010 12.993V4.007z"/><rect x="67" width="17" height="17" rx="4"/></g></g></svg> Published with Ghost</a>
+    </footer>
+    
+</body>
+</html>
