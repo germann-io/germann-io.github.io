@@ -197,7 +197,11 @@ GitHub.sublime-settings
 
 # User ignores
 core/
-content/
+content/adapters
+content/data
+content/logs
+content/settings
+content/themes
 Gruntfile.js
 LICENSE
 MigratorConfig.js
